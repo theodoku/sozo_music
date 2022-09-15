@@ -29,6 +29,45 @@
             </figcaption>
         </figure>
     </section>
-    
+    <main class="main">
+        <article class="main__article">
+            <h2>Our Location</h2>
+            <address>
+                No.4 Sarah Sampah ST. Weija-Sampah Valley, GS-0169-1069</br>Accra-Ghana.
+                Phone: <a href="tel:+2330249785621">+2330249785621</a>
+            </address>
+        </article>
+        <hr>
+        <article class="main__article contact">
+            <h2 class="contact__h2">Our Contact</h2>
+
+            <fieldset class="contact__fieldset">
+                <legend class="offscreen">Send Us A Message</legend>
+                <p class="contact__p">
+                    <label class="contact__label" for="name">Name</label>
+                    <input class="contact__input" type="text" name="name" id="name" placeholder="your name" required>
+                </p>
+
+                <p class="contact__p">
+                    <label class="contact__label" for="email">Email</label>
+                    <input class="contact__input" type="email" name="email" id="email" placeholder="your email" required>
+                </p>
+
+                <p class="contact__p">
+                    <label class="contact__label" for="message">Your Message</label>
+                    <br>
+                    <textarea class="contact__textarea" name="message" id="message" cols="30" row="10" placeholder="Type your message here" required></textarea>
+                </p>
+            </fieldset>
+            <button class="contact__button" type="submit">Send</button>
+            <button class="contact__button" type="reset">Reset</button>
+        </article>
+    </main>
+    <footer>
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year">2000</time></span>
+            <span class="nowrap">Sozo School of Music</span>
+        </p>
+    </footer>
 </body>
 </html>
