@@ -27,21 +27,21 @@ input, button, textarea {
     --FS: clamp(1rem, 2.2vw, 1.5rem);
 
     /* COLORS */
-    --BGCOLOR:orange;
     --BGCOLOR-FADE:rgb(47, 31, 2);
+    --BGCOLOR:orange;
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #fff;
-    --FONT-COLOR: #000;
     --BORDER-COLOR:#333;
-    --HIGHLIGHT-COLOR:orange;
-    --LINK-COLOR: #000;
-    --LINK-HOVER: rgba(121, 117, 117, 0.179);
-    --LINK-ACTIVE:orange;
+    --FONT-COLOR: #000;
     --HEADER-BGCOLOR: #000;
     --HEADER-COLOR:#fff;
-    --NAV-BGCOLOR:#fff;
     --HERO-BGCOLOR: rgb(47, 31, 2, 0.75);
     --HERO-COLOR: #fff;
+    --HIGHLIGHT-COLOR:orange;
+    --LINK-ACTIVE:orange;
+    --LINK-COLOR: #000;
+    --LINK-HOVER: rgba(121, 117, 117, 0.179);
+    --NAV-BGCOLOR:#fff;
 
 
 
@@ -83,13 +83,13 @@ html {
 
 body {
     background-color: var(--BODY-BGCOLOR);
-    color: var(--FONT-COLOR);
-    min-height:100vh;
-    max-width:800px;
-    margin:0 auto;
     border-left: var(--BORDERS);
     border-right: var(--BORDERS);
     box-shadow: 0 0 10px var(--BORDER-COLOR);
+    color: var(--FONT-COLOR);
+    margin:0 auto;
+    max-width:800px;
+    min-height:100vh;
 }
 
 h1,
@@ -173,5 +173,105 @@ a:active {
     100% {
         top:20px;
         transform: skew(-10deg, -5deg) scaleY(1);
+    }
+}
+
+/* ||FOOTER */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    text-align: center;
+    padding: var(--PADDING-TB),var(--PADDING-SIDE); 
+}
+
+/* ||MAIN */
+
+.main {
+    padding: 1rem 0.5rem; 
+}
+
+.main__article {
+    scroll-margin-top: 7rem;
+    margin: var(--MARGIN);
+}
+
+.main__article:first-child {
+    margin-top: 1rem;
+}
+
+.main__article:last-child {
+    margin-top: 1rem;
+}
+
+/* ||CONTACT */
+
+.contact__h2 {
+    margin:0;
+}
+
+.contact__fieldset {
+    border: none;
+}
+
+.contact__p {
+    margin:1em 0;
+}
+
+.contact__label {
+   display:block;
+   font-weight:lighter;
+}
+
+.contact__input,
+.contact__textarea {
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 100%;
+    border-width:2px;
+}
+
+.contact__button {
+    padding: 0.5em;
+    border-radius:10px;
+    background-color: var(--BGCOLOR);
+    color:var(--HEADER-BGCOLOR);
+}
+
+/* || MENU */
+
+thead, tbody, tfoot, tr {
+    display:contents;
+} 
+
+.course__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.course__header,
+.course__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge;
+}
+
+.course__item {
+    display: grid;
+    place-content: center;
+}
+
+@media screen and (max-width:576px) {
+    .header__h1 {
+        background-color:orange;
+    }
+    
+}
+@media screen and (max-width:920px) {
+    .footer {
+        background-color: dimgrey;
+
     }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sozo_Music</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -65,9 +66,11 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td class="course__item course__va" scope="col" colspan="3">
-                            Vacation &amp; Special Arrangement $100
-                        </td>
+                        <th class="course__item course__va" scope="row">
+                            Vacation &amp; Special Arrangement
+                        </th>
+                        <td class="course__item">Whole duration</td>
+                        <td class="course__item">$100</td>
                     </tr>
                 </tfoot>
             </table>
@@ -80,7 +83,7 @@
     <hr>
     <footer class="footer">
         <p>
-            <span class="nowrap">Copyright &copy; <time id="year">2000</time></span>
+            <span class="nowrap">Copyright &copy; <time id="year"></time></span>
             <span class="nowrap">Sozo School of Music</span>
         </p>
     </footer>
