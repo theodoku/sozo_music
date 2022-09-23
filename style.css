@@ -27,8 +27,8 @@ input, button, textarea {
     --FS: clamp(1rem, 2.2vw, 1.5rem);
 
     /* COLORS */
-    --BGCOLOR:aliceblue;
-    --BGCOLOR-FADE:rgb(195, 195, 240);
+    --BGCOLOR:orange;
+    --BGCOLOR-FADE:rgb(47, 31, 2);
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #fff;
     --FONT-COLOR: #000;
@@ -40,6 +40,9 @@ input, button, textarea {
     --HEADER-BGCOLOR: #000;
     --HEADER-COLOR:#fff;
     --NAV-BGCOLOR:#fff;
+    --HERO-BGCOLOR: rgb(47, 31, 2, 0.75);
+    --HERO-COLOR: #fff;
+
 
 
     /* BORDERS */
@@ -142,3 +145,33 @@ a:active {
     gap: 1rem;
 }
 
+/* ||HERO */
+.hero {
+    position: relative;
+}
+
+.hero__h2 {
+    background-color: var(--HERO-BGCOLOR);
+    color: var(--HERO-COLOR);
+    padding: 0.30em 0.5em;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation:showWelcome 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes showWelcome {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+    60% {
+        top: 30px;
+        transform: skew(10deg, -5deg) scaleY(1.5);
+    }
+    100% {
+        top:20px;
+        transform: skew(-10deg, -5deg) scaleY(1);
+    }
+}
